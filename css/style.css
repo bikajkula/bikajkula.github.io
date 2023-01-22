@@ -1,5 +1,8 @@
 body{
-  background:#333;
+  background-image:url('../images/camouflagebg.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
   color:#fff;
 }
 div.about{
@@ -13,28 +16,14 @@ a.nav-link{
 	text-align:center;
 	font-weight:lighter;
 }
- a{
-	text-decoration:none;
-	color:#fff;
- }
- a.nav-link:hover{
+ 
+a.nav-link:hover{
   color:orange;
-}
-a:hover{
-	text-decoration:none;
-	color:#000;
 }
 nav.navbar{
 	background:rgba(75,75,75,0.7);
 }
 a.active{color:orange;}
-table, th, td {
-  border: 2px solid black;
-  
-}
-table{
-	width:100%;
-}
 .top{
 	width:54px;
 	height:54px;
@@ -103,6 +92,15 @@ span.spend {
 	background:#fff;
 	color:#333;
 }
+/*proba*/
+
+section.pictextLevo{background:url('../images/staraplanina.jpg') center center fixed; width:100%;}
+section div.pokrivacLevo{width:70%;background:rgba(0,0,0,0.5);}
+div.about{color:#fff;}
+section.pictextDesno{background:url('../images/jm7hd.jpg') center center fixed;width:100%;}
+section div.pokrivacDesno{width:70%;margin-left:30%;background:rgba(0,0,0,0.5);}
+section.drugiBG{background:url('../images/jm9hd.jpg') center center fixed;width:100%;}
+/*proba*/
 footer.right{
    position: fixed;
    background: rgba(10,10,10, 0.5);
