@@ -1,0 +1,171 @@
+body{
+  background:#333;
+  color:#fff;
+}
+div.about{
+  background-color:rgba(170, 170, 170,0.6);
+  color:#000;
+}
+
+a.nav-link{
+	color:#fff; 
+	font-size:1.2rem;
+	text-align:center;
+	font-weight:lighter;
+}
+ a{
+	text-decoration:none;
+	color:#fff;
+ }
+ a.nav-link:hover{
+  color:orange;
+}
+a:hover{
+	text-decoration:none;
+	color:#000;
+}
+nav.navbar{
+	background:rgba(75,75,75,0.7);
+}
+a.active{color:orange;}
+table, th, td {
+  border: 2px solid black;
+  
+}
+table{
+	width:100%;
+}
+.top{
+	width:54px;
+	height:54px;
+	border:0;
+	float:right;
+}
+.totop{
+	position:fixed;
+	bottom:0.1;
+	left:0.1;
+	z-index:50;
+}
+.carousel-inner > .carousel-item > img { width:100%; height:80%; }
+#about-bar{
+	text-align:center;
+  position:fixed;
+  background: rgba(10,10,10, 0.5);
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  width:100%;
+  color:#fff;
+  z-index:25;
+}
+span.spend {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-shadow: 2px 2px 0 transparent, 4px 4px 0 #101010;
+    color: #fff;
+  }
+#about-bar ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+	text-align:center;
+	display:inline-block;
+	}
+#about-bar ul li {
+    float: left;
+}
+#about-bar ul li a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+#about-bar ul li a.fa-facebook:hover{
+    background: #3B5998;
+}
+#about-bar ul li a.fa-twitter:hover{
+    background: #55ACEE;
+}
+#about-bar ul li a.fa-youtube:hover{
+    background: #dd4b39;
+}
+
+#about-bar ul li a.fa-instagram:hover{
+    background: #f40083;
+}
+#about-bar .fa{
+	padding:16px 0;
+	width:48px;
+	margin:0;
+	background:#fff;
+	color:#333;
+}
+footer.right{
+   position: fixed;
+   background: rgba(10,10,10, 0.5);
+   right: 0;
+   bottom: 0;
+   padding: 10px;
+	 color:#fff;
+   border-radius: 10px 0px 0px 10px;
+   margin-bottom:0.5%;
+	 z-index:50;
+}
+#collapseNavbar{
+	padding-right:83px;
+}
+a.list-group-item:hover{
+	opacity:0.4;
+}
+
+.navbar-brand{
+	margin-right:0;
+}
+
+
+.iframe-container{
+  position: relative;
+  width: 80%;
+  margin-left:10%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+img.contimg{
+	height:20px;
+	margin-left:2px;
+}
+img.contbigimg{
+	height:100px;
+}
+.btn-sub{
+	color: #fff;
+    background-color: #6dd44b;
+    border-color: #6dd44b;
+}
+
+.hide,#pocetak,#kraj{
+	display:none;
+}
+
+@media only screen and (max-width: 768px) {
+	footer , div.totop ,.navbar-brand,.contbigimg{
+		display:none;
+	}
+	[class*="col-"] ,section div.pokrivacDesno,section div.pokrivacLevo{
+        min-width: 100%;
+		margin-left:0;
+    }
+	#collapseNavbar{
+	padding-right:0px;
+	}
+}
