@@ -2,7 +2,7 @@
 window.onkeyup = function(e) {
    var key = e.keyCode ? e.keyCode : e.which;
 
-   if (key == 32 || key == 13) {
+   if (key == 32) {
        proveriUnos();
    }
 }
