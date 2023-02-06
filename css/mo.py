@@ -441,3 +441,16 @@ Ukrštanje je najznačajnija operacija u sklopu genetskog algoritma. Za svaki pa
 a, b - roditelji y1, y2 - potomci (a, b) -> (y1, y2) Simetrično ukrštanje y1 = r * a + (1 - r) * b y2 = (1 - r) * a + r * b, gde je r slučajno odabrani broj u intervalu (0, 1).
 
 Jedinke se rangiraju (sortiraju) po vrednosti funkcije prilagođenosti funkcijom rank_chromosomes. Implementirane su sledece vrste selekcija: prirodna i ruletska selekcija. Prirodna selekcija je implementirana u funkciji natural_selection, pri čemu ostavljamo samo prvih n_keep jedinki. Funkcija roulette_selection predstavlja ruletski tip selekcije.
+
+Realno kodiranje podrazumeva da se jedinka prikaºe nizom (vektorom) realnih brojeva. Ovo kodiranje je isto
+kao kodiranje re²enja koje koristimo kod drugih numeri£kih optimizacionih metoda.
+
+Binarno kodiranje podrazumeva da kompletnu jedinku zapi²emo kao niz binarnih cifara
+
+Razlika izmeu ova dva tipa kodiranja leºi u tome kako na njih deluju operatori ukr²tanja i mutacije (koje ¢emo
+definisati na slede¢em slajdu). Element kodiranja (zapisa) koji ne moºemo deliti (u gornjem slu£aju to su brojevi, a u donjem to su biti) nazivaju se hromozomima.
+
+Mutacija kod realno kodiranih jedinki. Najjednostavniji na£in jeste da se nakon ukr²tanja, sa nekom malom
+verovatnoom, potomcima prosto doda neki slu£ajan vektor.
+
+utacija kod binarno kodiranih jedinki. Najjednostavniji na£in jeste da se, sa nekom malom verovatno¢om, potomcima invertuju neke bitne pozicije
