@@ -430,3 +430,14 @@ for i in range(0, len(x), 1):
 p = plt.plot(x, f, 'b--')
 p = plt.plot(xopt, fopt, 'om', label = 'max[f(x)]', markersize = 15, markeredgewidth = 3)
 plt.show()
+
+f drugi izvod od x ka je jednako priblizno f prvi izvod x ka - f prvi izvod x (ka-1)  i sve to kroz x ka - x (ka -1)
+
+Postoji mogućnost da se dobro rešenje dobijeno nakon mnogo iteracija izgubi zbog genetskih operatora mutacije ili selekcije. Zbog toga se javlja potreba da se najbolje jedinke zaštite od izmene ili eliminacije tokom evolutivnog procesa. Takav mehanizam se naziva elitizam.
+
+Mutacija predstavlja slučajnu promenu nekih gena određene jedinke. Kako deluje nad samo jednom jedinkom, mutacija je unarni operator koji kao rezultat daje izmenjenu jedinku. Mutacija se na svaku jedinku primenjuje sa nekom malom verovatnoćom. Ukoliko je verovatnoća mutacije premala, ili se uopšte ne primenjuje, može doći do preuranjene lokalne konvergencije. Ako je vrednost verovatnoće mutacije velika, genetski algoritam će se svesti na slučajnu pretragu što nema smisla.
+
+Ukrštanje je najznačajnija operacija u sklopu genetskog algoritma. Za svaki par roditelja koji će se pariti, tačka ukrštanja se bira nasumično iz gena.
+a, b - roditelji y1, y2 - potomci (a, b) -> (y1, y2) Simetrično ukrštanje y1 = r * a + (1 - r) * b y2 = (1 - r) * a + r * b, gde je r slučajno odabrani broj u intervalu (0, 1).
+
+Jedinke se rangiraju (sortiraju) po vrednosti funkcije prilagođenosti funkcijom rank_chromosomes. Implementirane su sledece vrste selekcija: prirodna i ruletska selekcija. Prirodna selekcija je implementirana u funkciji natural_selection, pri čemu ostavljamo samo prvih n_keep jedinki. Funkcija roulette_selection predstavlja ruletski tip selekcije.
