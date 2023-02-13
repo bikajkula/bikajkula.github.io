@@ -1,7 +1,6 @@
-<!doctype html>
 <html>
   <head>
-    <title>Brzo kucanje</title>
+    <title>Random igra</title>
     <meta charset="utf-8">
     <meta name="author" content="Mihajlo Karadzic" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+   
   </head>
   <body>
 		<nav class="navbar navbar-expand-md navbar-dark justify-content-center" id="top">
@@ -18,7 +18,7 @@
 				<ul class="navbar-nav">
 
 					<li class="nav-item">
-						<a class="nav-link" href="find.html">Brzo kucanje</a>
+						<a class="nav-link" href="random.html">Random</a>
 					</li>
 
 
@@ -30,30 +30,33 @@
 					<div class="col-lg-8 justify-content-center text-center mt-3">
 
 								<div class="row">
-									<div class="col-md-12">
-										<p id="trazeneReci"></p>
-										<textarea id="unos" placeholder="Pocnite kada budete spremni"></textarea>
-									</div>
-								
-										
-									<div class="col-md-12">
-										<p>Broj unetih reci:</p>
-										<p id="broj">0</p>
-										<h2 id="rezultat"></h2>
-										<p id="pocetak"></p>
-										<p id="kraj"></p>
-										<p>Vreme za koje ste otkucali 20 reci:<span id="vreme"></span></p>
+									<div class="col-md-12 text-center">
+										<div id="igra">
+											<span>Nivo: </span><span id="nivo">1</span>
+											<p id="infoNivo">Broj se nalazi u rasponu [1-5]</p>
+											<span>Bodovi: </span><span id="bodovi">0</span>
+											<span>Broj gresaka: </span><span id="greske">0</span>
+											<p>Pogadjaj:</p>
+											<input id="tryBroj" class="text-center" type="text" name="tryBroj" placeholder="Unesi broj" required>
+											<input type="submit" class="btn-sub" id="btn-submit" value="POTVRDI">
+											<p>SAVETI</p>
+											<p id="suggestionsBroj"></p>
+										</div>
+										<img id="finalPic"src="images/final.jpg"></img>
+										<h1 id="final"></h1>
 									</div>
 								</div>
+								
 					</div>
-			</div>
+				</div>
+		</div>
 
 			<div class="totop">
 				<a href="#top">
 					<img class="top" src="images/top.png" alt="BackToTop">
 				</a>
 			</div>
-			<nav id="about-bar">
+      <nav id="about-bar">
 				<ul>
 					<li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
 					<li><a href="https://www.youtube.com/" class="fa fa-youtube"> </a> </li>

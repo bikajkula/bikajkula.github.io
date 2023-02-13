@@ -1,8 +1,5 @@
 body{
-  background-image:url('../images/camouflagebg.jpg');
-  background-position:center center;
-  background-repeat: no-repeat;
-  background-attachment:fixed;
+  background:url('../images/patternbg.jpg');
   color:#fff;
 }
 div.about{
@@ -15,7 +12,7 @@ a.nav-link{
 	font-size:1.2rem;
 	text-align:center;
 	font-weight:lighter;
-}
+	}
  
 a.nav-link:hover{
   color:orange;
@@ -166,4 +163,9 @@ img.contbigimg{
 	#collapseNavbar{
 	padding-right:0px;
 	}
+}
+img#finalPic{
+	width:250px;
+	margin:auto;
+	display:none;
 }
