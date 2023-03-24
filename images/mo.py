@@ -200,3 +200,281 @@ Skup
 – a | b # sve što je u a ili b ili u oba
 – a & b # sve što je u a i u b
 – a ^ b # sve što je u a i b, ali nije u oba
+
+
+import random
+
+def prvi(x):
+    zbir =0
+    i = 0
+    while zbir<x:
+        zbir+=i
+        i+=1
+    return zbir,i-1
+
+def fakt(x):
+
+    f = 1
+    while x>0:
+        f*=x
+        x-=1
+
+    return f
+
+def pros():
+    d = {}
+    provera = 1
+    temp = 0
+    indeks = 1
+    suma=0
+    while provera>0:
+
+        print('Temperatura za ',indeks,'dan je :')
+        temp = input()
+
+        if temp.isdigit():
+            provera=1
+            d[indeks] = temp
+            suma+=int(temp)
+        else:
+            provera=0
+
+        indeks+=1
+
+    suma = suma/(indeks-2)
+
+    print('Prosecna temperatura je ',suma)
+    print(d)
+
+def cetvrti():
+    broj = random.randint(1,100)
+
+    print('Unesite vas broj:')
+    x = input()
+    x=int(x)
+
+    pokusaji = 1
+    while x!=broj:
+        if x>broj:
+            print('Pokusajte sa manjim brojem')
+        else:
+            print('Pokusajte sa vecim brojem')
+
+        print('Unesite vas broj:')
+        x = input()
+        x=int(x)
+
+        pokusaji+=1
+
+    print('Brao buraz uspeo si iz ',pokusaji,' puta')
+
+def peti():
+
+    tacni = 0
+    netacni = 0
+    provera = 1
+    while provera>0:
+        sab1 = random.randint(10,100)
+        sab2 = random.randint(10, 100)
+
+        zbir = sab1+sab2
+
+        print(sab1,' + ',sab2,' = ')
+        x=input()
+
+        if x.isdigit():
+
+            x=int(x)
+
+            if x == zbir:
+                print('TACNO!')
+                tacni+=1
+            else:
+                print('NETACNO!')
+                netacni+=1
+        else:
+            provera = 0
+
+    print('tacni :',tacni,'   , netacni: ',netacni, ' , procenat uspesnosti je :', (tacni/(tacni+netacni))*100,' %')
+
+def randomList(N):
+    l = []
+
+    i=0
+
+    while i<N:
+
+        temp = random.randint(1,500)
+        l.append(temp)
+        i+=1
+
+    return l
+
+def divisibleBy():
+
+    print('Duzina niza:')
+    duzina = input()
+    duzina = int(duzina)
+    l = randomList(duzina)
+    ln = []
+    print("Broj X:")
+    X = input()
+
+    X=int(X)
+
+    for x in l:
+        if x%X ==0:
+            ln.append(x)
+
+    print(l)
+    print('medzik')
+    print(ln)
+
+
+def delioc():
+    print("Broj X:")
+    X = input()
+
+    X = int(X)
+    l = []
+
+    for i in range(1,X+1):
+        if X%i ==0:
+            l.append(i)
+
+    print(l)
+
+def ChooseNumbers():
+
+    k = False
+    i=0
+    while k == False:
+        x1 = random.randint(0,100)
+        x2 = random.randint(0, 100)
+        x3 = random.randint(0, 100)
+
+        if x1==x2==x3:
+            k=True
+
+            print(x1,x2,x3)
+
+        i+=1
+
+    print('Bilo je potrebno ',i,' testiranja')
+
+
+def CalculateSum():
+    d = {}
+
+    l = []
+    provera = 1
+
+    while provera>0:
+        unos = input()
+
+        if unos.isdigit():
+            l.append(unos)
+
+        else:
+            provera = 0
+
+
+    for x in l:
+        zb = 0
+        for y in str(x):
+            zb += int(y)
+        d[x]= (zb, isPrime(x))
+
+
+    print(d)
+
+def isPrime(x):
+    l = []
+    x=int(x)
+    for i in range(1, x + 1):
+        if x % i == 0:
+            l.append(i)
+
+    if len(l) == 2:
+        return True
+    else:
+        return False
+
+def pkm():
+
+    d = {}
+    regular = 1
+    counter = 0
+    izbor = 'neutral'
+    while regular > 0:
+        igrac = counter%2
+        if igrac==0:
+            print('Prvi igrac bira:')
+            izbor = input()
+
+            if izbor == 'papir' or izbor== 'kamen' or izbor=='makaze':
+                d[igrac] = izbor
+            elif izbor =='predaja':
+                print('Drugi igrac pobedjuje jer se prvi igrac predao')
+                regular = 0
+            else:
+                regular = 0
+        else:
+            print('Drugi igrac bira:')
+            izbor = input()
+            if izbor == 'papir' or izbor == 'kamen' or izbor == 'makaze':
+                d[igrac] = izbor
+            elif izbor =='predaja':
+                print('Prvi igrac pobedjuje jer se prvi igrac predao')
+                regular = 0
+            else:
+                regular = 0
+
+        #aj da izvidimo situaciju
+        if igrac == 1 and regular == 1:
+            if d[0]=='papir':
+                if d[1] =='kamen':
+                    print('Prvi igrac pobedjuje jer papir pobeduje kamen')
+                elif d[1] =='makaze':
+                    print('Drugi igrac pobedjuje jer makaze pobedjuju papir')
+                else:
+                    print('Nereseno')
+            elif d[0]=='kamen':
+                if d[1] =='kamen':
+                    print('Nereseno')
+                elif d[1] =='makaze':
+                    print('Prvi igrac pobedjuje jer kamen pobedjuje makaze')
+                else:
+                    print('Drugi igrac pobedjuje jer papir pobedjuje kamen')
+            else:
+                if d[1] =='kamen':
+                    print('Drugi igrac pobedjuje jer kamen pobedjuje makaze')
+                elif d[1] =='makaze':
+                    print('Nereseno')
+                else:
+                    print('Prvi igrac pobedjuje jer makaze pobedjuju papir')
+
+        counter+=1
+
+
+def paskal(h):
+
+    i = 0
+    t=[]
+
+    for i in range(h):
+        t.append([])
+
+    for i in range(h):
+        t[i].append(1)
+        if i == 0:
+            continue
+        for j in range(i-1):
+            t[i].append(t[i-1][j]+ t[i-1][j+1])
+        t[i].append(1)
+
+
+    for x in t:
+        n = len(x)
+        print(' '*(8-n),x)
+
